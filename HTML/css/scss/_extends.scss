@@ -1,0 +1,65 @@
+// extends
+%hide{
+  display: none;
+}
+%link-underline{
+  text-decoration: underline;
+  &:hover{
+    text-decoration-color: transparent;
+  }
+}
+%link-underline-hover{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  &:hover{
+    text-decoration-color: initial;
+  }
+}
+%h1{
+  font: {
+    size: 3.2em;
+    weight: 800;
+  }
+  line-height: 1.28;
+}
+%h2{
+  font: {
+    size: 2.4em;
+    weight: 800;
+  }
+  line-height: 1.177;
+}
+%h3{
+  font: {
+    size: 1.8em;
+    weight: 800;
+  }
+  line-height: 1.45;
+}
+%h4{
+  font: {
+    size: 1.4em;
+    weight: 700;
+  }
+  line-height: 1;
+}
+%image-animate{
+  position: relative;
+  overflow: hidden;
+  img{
+    transform: translateY(-40%);
+    @include trns($duration: 1.7s);
+  }
+  &:after{
+    @include trns($duration: 1.7s);
+    @include pseudoOverlay(#fff, $z-index: 100);
+  }
+  &.is-visible {
+    img{
+      transform: translateY(0);
+    }
+    &:after{
+      height: 0;
+    }
+  }
+}

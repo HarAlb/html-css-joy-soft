@@ -1,0 +1,40 @@
+:root {
+  --cont-width: 1440px;
+  --col_space: 20px;
+  --x-space: 90px;
+  --primary-bg-color: #24213A;
+  --bg-light: #3A3756;
+  --primary-color: #B469FF;
+  --second-color: #FFC849;
+  --primary-text-color: #fff;
+  --font-main: 'Poppins';
+  --radius: 100px;
+  --section-y-space: 70px;
+}
+
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "slick";
+@import "reset";
+@import "extends";
+@import "general";
+@import "header";
+@import "footer";
+@import "pages";
+
+@include respond-below(xl){
+  :root{
+
+  }
+}
+@include respond-below(sm){
+  :root{
+
+  }
+}
+
+
+
+
+

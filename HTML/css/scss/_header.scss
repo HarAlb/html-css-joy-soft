@@ -1,0 +1,49 @@
+.logo{
+
+}
+.header{
+  padding-block: 32px;
+  &--abs{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  &__main{
+    --col_space: 0;
+    background-color: var(--bg-light);
+    padding: 10px;
+    margin-inline: -10px;
+    border-radius: var(--radius);
+    .row{
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn{
+      box-shadow: none;
+    }
+  }
+}
+
+.main-nav{
+  .menu{
+    gap: 25px;
+  }
+}
+
+.menu-toggle{
+  line-height: 1;
+  padding-top: 4px;
+  .header_abs &, .mobile-menu-open &{
+    color: #fff;
+  }
+  .icon{
+    @include size(28px);
+  }
+  @include respond-below(sm){
+    .icon{
+      @include size(12px);
+    }
+  }
+}
