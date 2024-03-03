@@ -2276,15 +2276,15 @@ select {
     .menu.menu--social li {
       line-height: 5px; }
 
-  .reasons-list.reason-list--active .reason:not(.reason--active) {
-    display: block; }
+  .reasons-list.reason-list--active .reason {
+    display: block !important; }
 
   .reasons-list__item {
     max-width: 100%; }
     .reasons-list__item .reason {
       width: 100%; }
 
-  .reason-list--active .reason--active .reason__content {
+  .reason--active .reason__content {
     padding: 200px 16px 16px;
     width: 100%;
     z-index: 2;
@@ -2293,7 +2293,7 @@ select {
     transition: all 0s;
     margin-bottom: -180px; }
 
-  .reason-list--active .reason--active .close__mobile.close {
+  .reason--active .close__mobile.close {
     position: absolute;
     top: 25px;
     right: 25px;

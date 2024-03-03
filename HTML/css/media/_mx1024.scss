@@ -187,9 +187,7 @@ h3, .h3 {
   &.reason-list--active {
 
     .reason {
-      &:not(.reason--active) {
-        display: block;
-      }
+      display: block !important;
 
     }
   }
@@ -200,7 +198,7 @@ h3, .h3 {
     width: 100%;
   }
 }
-.reason-list--active .reason--active  .reason__content{
+ .reason--active  .reason__content{
   padding: 200px 16px 16px;
   width: 100%;
   z-index: 2;
@@ -209,7 +207,7 @@ h3, .h3 {
   transition: all 0s;
   margin-bottom: -180px;
 }
-.reason-list--active .reason--active  .close__mobile.close {
+ .reason--active  .close__mobile.close {
   position: absolute;
   top: 25px;
   right: 25px;
