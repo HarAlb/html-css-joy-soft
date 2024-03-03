@@ -12,6 +12,8 @@
   --section-y-space: 70px;
 }
 
+//@import "aos";
+@import "owl.carousel.min";
 @import "variables";
 @import "mixins";
 @import "fonts";
@@ -22,6 +24,7 @@
 @import "header";
 @import "footer";
 @import "pages";
+@import "media/media";
 
 @include respond-below(xl){
   :root{

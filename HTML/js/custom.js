@@ -1,3 +1,4 @@
+
 jQuery(function ($){
     // reveal animation
     if(typeof ScrollReveal === "function"){
@@ -63,29 +64,9 @@ jQuery(function ($){
             typeTextAnimation(slick, currentSlide)
         });
 
-        const stepsSlider = $('.js-steps-slider');
-        stepsSlider.slick({
-            slidesToShow: 1,
-            arrows: false,
-            fade: true,
-            dots: true,
-            infinite: false
-        });
-        stepsSlider.on('wheel', (function(e) {
-            e.preventDefault();
-            if (e.originalEvent.deltaY < 0) {
-                $(this).slick('slickPrev');
-            } else {
-                $(this).slick('slickNext');
-            }
-        }));
 
-        $('.js-staff-slider').slick({
-            variableWidth: true,
-            arrows: false,
-            slidesToScroll: 1,
-            centerMode: true
-        });
+
+
     }
 
     // menu
@@ -124,8 +105,48 @@ reasonsList.querySelectorAll('.reason').forEach(r => {
     });
 });
 
-/*
 
-const typeElements = document.querySelectorAll('.idea__text > h2').forEach(el => {
-    console.log(el)
-});*/
+
+
+$('.staff-slider').owlCarousel({
+    center: true,
+    loop: true,
+    nav: false,
+    margin:0,
+    items: 5,
+    dots:false,
+    responsive:{
+        0:{
+            items: 1,
+        },
+        768:{
+            items: 3,
+        },
+        990:{
+            items: 5,
+        }
+    },
+    onInitialized: coverFlowEfx,
+    onTranslate: coverFlowEfx,
+});
+
+function coverFlowEfx(e){
+    idx = e.item.index;
+    $('.owl-item.big').removeClass('big');
+    $('.owl-item.medium').removeClass('medium');
+    $('.owl-item.mdright').removeClass('mdright');
+    $('.owl-item.mdleft').removeClass('mdleft');
+    $('.owl-item.smallRight').removeClass('smallRight');
+    $('.owl-item.smallLeft').removeClass('smallLeft');
+    $('.owl-item').eq(idx -1).addClass('medium mdleft');
+    $('.owl-item').eq(idx).addClass('big');
+    $('.owl-item').eq(idx + 1).addClass('medium mdright');
+    $('.owl-item').eq(idx + 2).addClass('smallRight');
+    $('.owl-item').eq(idx - 2).addClass('smallLeft');
+}
+
+
+
+
+AOS.init();
+
