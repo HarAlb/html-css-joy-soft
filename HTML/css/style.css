@@ -2293,7 +2293,7 @@ select {
     transition: all 0s;
     margin-bottom: -180px; }
 
-  .reason-list--active .close__mobile.close {
+  .reason-list--active .reason--active .close__mobile.close {
     position: absolute;
     top: 25px;
     right: 25px;
