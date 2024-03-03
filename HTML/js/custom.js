@@ -147,7 +147,6 @@ function coverFlowEfx(e) {
 
 $(function () {
     AOS.init({offset: -300, duration: 700, easing: "ease-out-quad",});
-    window.addEventListener('load', AOS.refresh);
 });
 
 
